@@ -1,4 +1,4 @@
-<template :style="{'background-image':'url(https://vuejs.org/images/logo.png)'}">
+<template>
   <form class="form-signin" @submit.prevent="submit">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
@@ -29,7 +29,7 @@ export default {
       const response = await axios.post('login', {
         email: email.value,
         password: password.value,
-        scope: 'admin'
+        // scope: 'admin'
       });
       // console.log(response);
       localStorage.setItem('token', response.data.token)
