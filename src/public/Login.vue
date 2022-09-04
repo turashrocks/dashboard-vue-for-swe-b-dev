@@ -29,7 +29,7 @@ export default {
       const response = await axios.post('login', {
         email: email.value,
         password: password.value,
-        // scope: 'admin'
+        scope: 'admin'
       });
       // console.log(response);
       localStorage.setItem('token', response.data.token)
